@@ -16,7 +16,7 @@
 - [Phase 1 — Wazuh SIEM](#-phase-1--wazuh-siem)
 - [Phase 2 — Windows Agent](#-phase-2--windows-agent)
 - [Phase 3 — Snort IDS/IPS](#-phase-3--snort-idsips)
-- [Phase 4 — n8n SOAR Automation](#-phase-4--n8n-soar-automation)
+- [Phase 4 — n8n Automation](#-phase-4--n8n-automation)
 - [Attack Simulations](#-attack-simulations)
 - [Results](#-results)
 - [Troubleshooting](#-troubleshooting)
@@ -57,7 +57,7 @@
 |------|---------|---------|
 | Wazuh | v4.12.0 | SIEM — threat detection & log analysis |
 | Snort | 3.11.1.0 | IDS/IPS — network intrusion detection |
-| n8n | latest | SOAR — workflow automation |
+| n8n | latest | Workflow automation |
 | ngrok | latest | Tunnel — expose n8n webhook publicly |
 | AbuseIPDB | API v2 | IP reputation check |
 | VirusTotal | API v3 | IP/file analysis |
@@ -147,10 +147,7 @@ alert tcp any any -> 192.168.126.131 22 (msg:"SSH Connection Attempt"; sid:10000
 
 ---
 
-## ⚡ Phase 4 — n8n SOAR Automation
-
-### Why n8n?
-Replaced Shuffle SOAR due to stability issues after restarts. n8n provides native nodes for Telegram, Gmail, Google Sheets, and full HTTP Request flexibility.
+## ⚡ Phase 4 — n8n Automation
 
 ### Infrastructure Setup
 
