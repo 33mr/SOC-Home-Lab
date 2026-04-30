@@ -145,21 +145,6 @@ alert tcp any any -> 192.168.126.131 22 (msg:"SSH Connection Attempt"; sid:10000
 ### Screenshot — Snort Installed
 ![Snort Installed](snort-installed.png)
 
-### Screenshot — Snort Config
-![Snort Config](snort-lua-config.png)
-
-### Screenshot — Snort Loading Rules
-![Snort Loading](snort-loading.png)
-
-### Screenshot — Snort IDS Running
-![Snort Running](snort-running.png)
-
-### Screenshot — Snort IPS Startup
-![Snort IPS Startup](snort-ips-startup.png)
-
-### Screenshot — Snort IPS Rules Loaded
-![Snort IPS Rules](snort-ips-rules.png)
-
 ### Screenshot — Snort IPS Dropping Packets
 ![Snort IPS Dropping](snort-ips-dropping.png)
 
@@ -223,14 +208,17 @@ If (rule.level > 2)
 | **Auto Block IP** | HTTP Request | POST Wazuh API /active-response |
 | **Log Incident** | Google Sheets | Append row to Wazuh Incidents sheet |
 
-### Screenshot — n8n Workflow Canvas
-![n8n Workflow](n8n-workflow.png)
-
-### Screenshot — n8n SMTP Success
-![n8n SMTP](n8n-smtp-success.png)
-
 ### Screenshot — Wazuh Integrations Log
 ![Integrations Log](wazuh-integrations-log.png)
+
+### Screenshot — n8n Workflow Canvas
+*(coming soon)*
+
+### Screenshot — Telegram Alerts
+*(coming soon)*
+
+### Screenshot — Gmail Inbox
+*(coming soon)*
 
 ### Wazuh Integration Script
 File: `/var/ossec/integrations/custom-webhook`
@@ -282,8 +270,7 @@ sudo chown root:wazuh /var/ossec/integrations/custom-webhook
 🤖 Powered by Wazuh + n8n
 ```
 
-### Screenshot — Gmail Inbox
-![Gmail Alerts](gmail-alerts.png)
+
 
 ---
 
