@@ -71,8 +71,20 @@ https://192.168.126.131
 - Dashboard accessible at `https://192.168.126.131:443`
 - Default credentials reset using `wazuh-passwords-tool.sh`
 
+### Screenshot — Disk Expansion
+![Disk Expansion](wazuh-disk-expansion.png)
+
+### Screenshot — Installation Complete
+![Installation Complete](wazuh-installation-complete.png)
+
+### Screenshot — Password Reset
+![Password Reset](wazuh-password-change.png)
+
 ### Screenshot — Wazuh Dashboard
-![Wazuh Dashboard](screenshots/wazuh-dashboard.png)
+![Wazuh Dashboard](wazuh-dashboard.png)
+
+### Screenshot — Threat Hunting
+![Threat Hunting](wazuh-threat-hunting.png)
 
 ### Alert Levels Reference
 
@@ -100,7 +112,7 @@ NET START WazuhSvc
 ```
 
 ### Screenshot — Windows Agent Active
-![Windows Agent](screenshots/wazuh-agent-windows.png)
+![Windows Agent](wazuh-agent-windows.png)
 
 ---
 
@@ -129,6 +141,27 @@ alert tcp any any -> 192.168.126.131 22 (msg:"SSH Connection Attempt"; sid:10000
 ### Results
 - ✅ IDS mode — detected and logged all attacks
 - ✅ IPS mode with NFQueue — **100% packet drop** confirmed
+
+### Screenshot — Snort Installed
+![Snort Installed](snort-installed.png)
+
+### Screenshot — Snort Config
+![Snort Config](snort-lua-config.png)
+
+### Screenshot — Snort Loading Rules
+![Snort Loading](snort-loading.png)
+
+### Screenshot — Snort IDS Running
+![Snort Running](snort-running.png)
+
+### Screenshot — Snort IPS Startup
+![Snort IPS Startup](snort-ips-startup.png)
+
+### Screenshot — Snort IPS Rules Loaded
+![Snort IPS Rules](snort-ips-rules.png)
+
+### Screenshot — Snort IPS Dropping Packets
+![Snort IPS Dropping](snort-ips-dropping.png)
 
 ---
 
@@ -191,7 +224,13 @@ If (rule.level > 2)
 | **Log Incident** | Google Sheets | Append row to Wazuh Incidents sheet |
 
 ### Screenshot — n8n Workflow Canvas
-![n8n Workflow](screenshots/n8n-workflow.png)
+![n8n Workflow](n8n-workflow.png)
+
+### Screenshot — n8n SMTP Success
+![n8n SMTP](n8n-smtp-success.png)
+
+### Screenshot — Wazuh Integrations Log
+![Integrations Log](wazuh-integrations-log.png)
 
 ### Wazuh Integration Script
 File: `/var/ossec/integrations/custom-webhook`
@@ -243,14 +282,8 @@ sudo chown root:wazuh /var/ossec/integrations/custom-webhook
 🤖 Powered by Wazuh + n8n
 ```
 
-### Screenshot — Telegram Alerts
-![Telegram Alerts](screenshots/telegram-alerts.png)
-
 ### Screenshot — Gmail Inbox
-![Gmail Alerts](screenshots/gmail-alerts.png)
-
-### Screenshot — Google Sheets Log
-![Google Sheets](screenshots/google-sheets.png)
+![Gmail Alerts](gmail-alerts.png)
 
 ---
 
@@ -275,7 +308,7 @@ hydra -l administrator -P /usr/share/wordlists/rockyou.txt rdp://192.168.126.135
 **Level:** 10 | **Alert:** ✅ Telegram + Gmail + Google Sheets
 
 ### Screenshot — Wazuh Alerts Dashboard
-![Wazuh Alerts](screenshots/wazuh-alerts.png)
+![Wazuh Alerts](wazuh-alerts.png)
 
 ---
 
