@@ -26,22 +26,7 @@
 
 ## 🗺️ Lab Architecture
 
-```
-┌─────────────────────────────────────────────────────┐
-│           VMware Workstation — NAT 192.168.126.0/24  │
-│                                                      │
-│  ┌──────────────┐    ┌──────────────┐    ┌────────────────────┐  │
-│  │  Kali Linux  │    │  Windows 10  │    │   Ubuntu 22.04     │  │
-│  │ .134 Attacker│───▶│ .135  Target │───▶│ .131 Wazuh Server  │  │
-│  │ Snort IDS/IPS│    │ Wazuh Agent  │    │ n8n + ngrok        │  │
-│  └──────────────┘    └──────────────┘    └────────────────────┘  │
-└─────────────────────────────────────────────────────┘
-                                                  │
-                              ┌───────────────────┼───────────────────┐
-                              ▼                   ▼                   ▼
-                         Telegram             Gmail            Google Sheets
-                         SOC Alerts         HTML Report       Incident Log
-```
+![Lab Architecture](screenshots/lab-architecture.svg)
 
 | VM | IP | Role | OS |
 |----|----|------|----|
