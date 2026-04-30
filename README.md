@@ -26,7 +26,7 @@
 
 ## 🗺️ Lab Architecture
 
-![Lab Architecture](screenshots/lab-architecture.svg)
+![Lab Architecture](lab-architecture.svg)
 
 | VM | IP | Role | OS |
 |----|----|------|----|
