@@ -1,0 +1,108 @@
+<svg width="680" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e;font-family:sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#7F77DD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- LAYER BANDS -->
+<rect x="44" y="56" width="624" height="110" rx="12" fill="#252538" stroke="#444" stroke-width="0.5"/>
+<rect x="44" y="180" width="624" height="110" rx="12" fill="#252538" stroke="#444" stroke-width="0.5"/>
+<rect x="44" y="304" width="624" height="110" rx="12" fill="#252538" stroke="#444" stroke-width="0.5"/>
+<rect x="44" y="428" width="624" height="100" rx="12" fill="#252538" stroke="#444" stroke-width="0.5"/>
+
+<!-- LAYER LABELS -->
+<text x="62" y="75" font-size="12" fill="#888">Network layer — VMware NAT 192.168.126.0/24</text>
+<text x="62" y="199" font-size="12" fill="#888">SIEM layer — Wazuh v4.12.0</text>
+<text x="62" y="323" font-size="12" fill="#888">SOAR layer — n8n · ngrok</text>
+<text x="62" y="447" font-size="12" fill="#888">Output layer</text>
+
+<!-- Kali -->
+<rect x="62" y="84" width="172" height="68" rx="10" fill="#500d0d" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="148" y="108" font-size="14" font-weight="600" fill="#f7c1c1" text-anchor="middle">Kali Linux</text>
+<text x="148" y="126" font-size="12" fill="#E24B4A" text-anchor="middle">.134 · Attacker · Snort IDS/IPS</text>
+
+<!-- Windows -->
+<rect x="254" y="84" width="172" height="68" rx="10" fill="#0c2244" stroke="#378ADD" stroke-width="0.5"/>
+<text x="340" y="108" font-size="14" font-weight="600" fill="#B5D4F4" text-anchor="middle">Windows 10</text>
+<text x="340" y="126" font-size="12" fill="#378ADD" text-anchor="middle">.135 · Target · Wazuh Agent</text>
+
+<!-- Ubuntu -->
+<rect x="446" y="84" width="210" height="68" rx="10" fill="#064030" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="551" y="108" font-size="14" font-weight="600" fill="#9FE1CB" text-anchor="middle">Ubuntu 22.04</text>
+<text x="551" y="126" font-size="12" fill="#1D9E75" text-anchor="middle">.131 · Wazuh Server · n8n · ngrok</text>
+
+<!-- attack arrow -->
+<line x1="235" y1="118" x2="252" y2="118" stroke="#E24B4A" stroke-width="2" marker-end="url(#arr-red)" fill="none"/>
+<text x="243" y="111" font-size="11" fill="#E24B4A" text-anchor="middle">attack</text>
+<!-- logs arrow -->
+<line x1="427" y1="118" x2="444" y2="118" stroke="#1D9E75" stroke-width="2" marker-end="url(#arr-teal)" fill="none"/>
+<text x="435" y="111" font-size="11" fill="#1D9E75" text-anchor="middle">logs</text>
+
+<!-- Network → SIEM -->
+<line x1="551" y1="153" x2="551" y2="178" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#arr-teal)" fill="none"/>
+
+<!-- Wazuh Alert -->
+<rect x="62" y="208" width="170" height="64" rx="10" fill="#064030" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="147" y="232" font-size="14" font-weight="600" fill="#9FE1CB" text-anchor="middle">Wazuh Alert</text>
+<text x="147" y="250" font-size="12" fill="#1D9E75" text-anchor="middle">Rule fires · level 7+</text>
+
+<!-- ossec.conf -->
+<rect x="258" y="208" width="164" height="64" rx="10" fill="#064030" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="340" y="228" font-size="14" font-weight="600" fill="#9FE1CB" text-anchor="middle">ossec.conf</text>
+<text x="340" y="246" font-size="12" fill="#1D9E75" text-anchor="middle">integration config</text>
+<text x="340" y="262" font-size="12" fill="#1D9E75" text-anchor="middle">triggers script</text>
+
+<!-- Python Bridge -->
+<rect x="448" y="208" width="208" height="64" rx="10" fill="#064030" stroke="#1D9E75" stroke-width="0.5"/>
+<text x="552" y="228" font-size="14" font-weight="600" fill="#9FE1CB" text-anchor="middle">Python Bridge</text>
+<text x="552" y="246" font-size="12" fill="#1D9E75" text-anchor="middle">custom-webhook script</text>
+<text x="552" y="262" font-size="12" fill="#1D9E75" text-anchor="middle">POST alert → ngrok URL</text>
+
+<line x1="233" y1="240" x2="256" y2="240" stroke="#888" stroke-width="1" marker-end="url(#arrow)" fill="none"/>
+<line x1="423" y1="240" x2="446" y2="240" stroke="#888" stroke-width="1" marker-end="url(#arrow)" fill="none"/>
+
+<!-- SIEM → SOAR -->
+<line x1="552" y1="273" x2="480" y2="302" stroke="#7F77DD" stroke-width="1.5" marker-end="url(#arr-purple)" fill="none"/>
+
+<!-- n8n Workflow -->
+<rect x="62" y="332" width="596" height="64" rx="10" fill="#1e1a4a" stroke="#7F77DD" stroke-width="0.5"/>
+<text x="360" y="354" font-size="14" font-weight="600" fill="#CECBF6" text-anchor="middle">n8n Workflow</text>
+<text x="360" y="372" font-size="12" fill="#7F77DD" text-anchor="middle">Webhook › AbuseIPDB › VirusTotal › If score &gt; 50 › Alert + Log + Block</text>
+
+<!-- SOAR → Outputs -->
+<line x1="148" y1="397" x2="118" y2="426" stroke="#7F77DD" stroke-width="1" marker-end="url(#arr-purple)" fill="none"/>
+<line x1="268" y1="397" x2="255" y2="426" stroke="#7F77DD" stroke-width="1" marker-end="url(#arr-purple)" fill="none"/>
+<line x1="400" y1="397" x2="400" y2="426" stroke="#7F77DD" stroke-width="1" marker-end="url(#arr-purple)" fill="none"/>
+<line x1="560" y1="397" x2="576" y2="426" stroke="#7F77DD" stroke-width="1" marker-end="url(#arr-purple)" fill="none"/>
+
+<!-- Telegram -->
+<rect x="62" y="456" width="110" height="58" rx="10" fill="#0c2244" stroke="#378ADD" stroke-width="0.5"/>
+<text x="117" y="479" font-size="14" font-weight="600" fill="#B5D4F4" text-anchor="middle">Telegram</text>
+<text x="117" y="497" font-size="12" fill="#378ADD" text-anchor="middle">SOC alerts</text>
+
+<!-- Gmail -->
+<rect x="188" y="456" width="110" height="58" rx="10" fill="#3d1408" stroke="#D85A30" stroke-width="0.5"/>
+<text x="243" y="479" font-size="14" font-weight="600" fill="#F5C4B3" text-anchor="middle">Gmail</text>
+<text x="243" y="497" font-size="12" fill="#D85A30" text-anchor="middle">HTML report</text>
+
+<!-- Google Sheets -->
+<rect x="314" y="456" width="144" height="58" rx="10" fill="#0f2a06" stroke="#639922" stroke-width="0.5"/>
+<text x="386" y="479" font-size="14" font-weight="600" fill="#C0DD97" text-anchor="middle">Google Sheets</text>
+<text x="386" y="497" font-size="12" fill="#639922" text-anchor="middle">Incident log</text>
+
+<!-- Auto Block -->
+<rect x="474" y="456" width="182" height="58" rx="10" fill="#2e1a04" stroke="#BA7517" stroke-width="0.5"/>
+<text x="565" y="472" font-size="14" font-weight="600" fill="#FAC775" text-anchor="middle">Auto Block IP</text>
+<text x="565" y="490" font-size="12" fill="#BA7517" text-anchor="middle">Wazuh Active Response</text>
+<text x="565" y="506" font-size="11" fill="#BA7517" text-anchor="middle">⚠ Pending — JWT auth</text>
+</svg>
