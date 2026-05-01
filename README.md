@@ -2,7 +2,7 @@
 
 ![SOC Lab](https://img.shields.io/badge/Status-Active-00e676?style=for-the-badge)
 ![Wazuh](https://img.shields.io/badge/Wazuh-v4.12.0-00d4ff?style=for-the-badge)
-![n8n](https://img.shields.io/badge/n8n-SOAR-7c6af7?style=for-the-badge)
+![n8n](https://img.shields.io/badge/n8n-Automation-7c6af7?style=for-the-badge)
 ![Snort](https://img.shields.io/badge/Snort-IDS%2FIPS-ff5252?style=for-the-badge)
 
 > A hands-on SOC Home Lab featuring **Wazuh SIEM**, **Snort IDS/IPS**, and **n8n automation**. Includes real attack simulations from Kali Linux, automated threat detection, IP enrichment via AbuseIPDB & VirusTotal, and instant alerting via Telegram, Gmail, and Google Sheets.
@@ -277,10 +277,7 @@ sudo chown root:wazuh /var/ossec/integrations/custom-webhook
 ```
 
 
-
 ---
-
-## 💥 Attack Simulations
 
 ### 1. SSH Brute Force — Kali → Ubuntu
 
@@ -304,7 +301,7 @@ hydra -l administrator -P /usr/share/wordlists/rockyou.txt rdp://192.168.126.135
 **Level:** 10 | **Alert:** ✅ Telegram + Gmail + Google Sheets
 
 ### Screenshot — Wazuh Alerts Dashboard
-![Wazuh Alerts](wazuh-alerts.png)
+![Wazuh Alerts](wazuh-threat-hunting.png)
 
 ---
 
@@ -362,7 +359,7 @@ sudo tail -f /var/ossec/logs/alerts/alerts.log
 sudo tail -f /var/ossec/logs/ossec.log | grep -i "integrat"
 
 # Reset password
-sudo /usr/share/wazuh-indexer/plugins/opensearch-security/tools/wazuh-passwords-tool.sh -u admin -p "NewPassword1."
+sudo /usr/share/wazuh-indexer/plugins/opensearch-security/tools/wazuh-passwords-tool.sh -u admin -p "YOUR_NEW_PASSWORD"
 
 # Test log parsing
 sudo /var/ossec/bin/wazuh-logtest
