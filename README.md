@@ -81,10 +81,10 @@ https://192.168.126.131
 ![Password Reset](wazuh-password-change.png)
 
 ### Screenshot — Wazuh Dashboard
-![Wazuh Dashboard](wazuh-dashboard.png)
+![Wazuh Dashboard](wazuh-dashboard-overview.png)
 
-### Screenshot — Threat Hunting
-![Threat Hunting](wazuh-threat-hunting.png)
+### Screenshot — Wazuh Threat Hunting
+![Threat Hunting](wazuh-alerts.png)
 
 ### Alert Levels Reference
 
@@ -113,6 +113,9 @@ NET START WazuhSvc
 
 ### Screenshot — Windows Agent Active
 ![Windows Agent](wazuh-agent-windows.png)
+
+### Screenshot — Endpoints Overview
+![Endpoints](wazuh-endpoints.png)
 
 ---
 
@@ -212,13 +215,16 @@ If (rule.level > 2)
 ![Integrations Log](wazuh-integrations-log.png)
 
 ### Screenshot — n8n Workflow Canvas
-*(coming soon)*
+![n8n Workflow](n8n-workflow.png)
 
 ### Screenshot — Telegram Alerts
-*(coming soon)*
+![Telegram Alerts](telegram-alerts.png)
 
 ### Screenshot — Gmail Inbox
-*(coming soon)*
+![Gmail Alerts](gmail-alerts.png)
+
+### Screenshot — Google Sheets Log
+![Google Sheets](google-sheets.png)
 
 ### Wazuh Integration Script
 File: `/var/ossec/integrations/custom-webhook`
@@ -279,11 +285,14 @@ sudo chown root:wazuh /var/ossec/integrations/custom-webhook
 ### 1. SSH Brute Force — Kali → Ubuntu
 
 ```bash
-hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.126.131 -t 4
+hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.126.131 -t 4 -V
 ```
 
 **Detection:** Rule 5760 — `syslog: User missed the password more than one time`
 **Level:** 10 | **Alert:** ✅ Telegram + Gmail + Google Sheets
+
+### Screenshot — Kali Hydra Attack
+![Kali Attack](kali-hydra-attack.png)
 
 ### 2. RDP Brute Force — Kali → Windows
 
