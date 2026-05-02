@@ -211,9 +211,6 @@ If (rule.level > 2)
 | **Auto Block IP** | HTTP Request | POST Wazuh API /active-response |
 | **Log Incident** | Google Sheets | Append row to Wazuh Incidents sheet |
 
-### Screenshot — Wazuh Integrations Log
-![Integrations Log](wazuh-integrations-log.png)
-
 ### Screenshot — n8n Workflow Canvas
 ![n8n Workflow](n8n-workflow.png)
 
@@ -278,6 +275,8 @@ sudo chown root:wazuh /var/ossec/integrations/custom-webhook
 
 
 ---
+
+## 💥 Attack Simulations
 
 ### 1. SSH Brute Force — Kali → Ubuntu
 
