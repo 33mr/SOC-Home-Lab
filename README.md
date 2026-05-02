@@ -182,7 +182,7 @@ AbuseIPDB — Check IP reputation score
 VirusTotal — IP analysis & malware check
     │
     ▼
-If (rule.level > 2)
+If (rule.level >= 7)
     │
     ├── TRUE ──▶ Telegram SOC Alert
     │               │
@@ -205,7 +205,7 @@ If (rule.level > 2)
 | **Webhook** | Trigger | POST /wazuh-alerts — receives Wazuh JSON |
 | **AbuseIPDB** | HTTP Request | GET api.abuseipdb.com/api/v2/check |
 | **VirusTotal** | HTTP Request | GET virustotal.com/api/v3/ip_addresses/{ip} |
-| **If** | Conditional | rule.level > 2 |
+| **If** | Conditional | rule.level >= 7 |
 | **Telegram SOC Alert** | Telegram | Instant formatted alert |
 | **Email** | Gmail OAuth2 | HTML email with incident details |
 | **Auto Block IP** | HTTP Request | POST Wazuh API /active-response |
